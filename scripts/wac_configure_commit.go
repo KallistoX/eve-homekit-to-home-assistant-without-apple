@@ -4,16 +4,17 @@
 // validation).
 //
 // Build (waclib resolves inside a WACResearch checkout):
-//   git clone https://github.com/BertoldVdb/WACResearch
-//   mkdir -p WACResearch/waclib/examples/wac_cc
-//   cp wac_configure_commit.go WACResearch/waclib/examples/wac_cc/main.go
-//   cd WACResearch/waclib/examples/wac_cc && GOFLAGS=-mod=mod go build -o /tmp/wac_cc .
+//
+//	git clone https://github.com/BertoldVdb/WACResearch
+//	mkdir -p WACResearch/waclib/examples/wac_cc
+//	cp wac_configure_commit.go WACResearch/waclib/examples/wac_cc/main.go
+//	cd WACResearch/waclib/examples/wac_cc && GOFLAGS=-mod=mod go build -o /tmp/wac_cc .
 //
 // Flow (see docs/wifi-wac.md):
-//   1) join the accessory SoftAP, then:
-//        wac_cc -mode configure -dest 192.168.x.1 -ssid YOUR_SSID -password YOUR_PSK
-//   2) join YOUR target WiFi, then within ~60s:
-//        wac_cc -mode commit -dest <accessory-ip-on-target-net>
+//  1. join the accessory SoftAP, then:
+//     wac_cc -mode configure -dest 192.168.x.1 -ssid YOUR_SSID -password YOUR_PSK
+//  2. join YOUR target WiFi, then within ~60s:
+//     wac_cc -mode commit -dest <accessory-ip-on-target-net>
 package main
 
 import (
