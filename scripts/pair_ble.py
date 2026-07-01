@@ -8,8 +8,8 @@ That dataset is a SECRET (it contains the Thread network master key) -- never
 commit it or paste it anywhere public.
 
 Usage:
-  python pair_ble.py --name 5AAA --code 123-45-678 --out plug.json
-  python pair_ble.py --name 5AAA --code 12345678 --dataset 0e08... --out plug.json
+  python pair_ble.py --name ABCD --code 123-45-678 --out plug.json
+  python pair_ble.py --name ABCD --code 12345678 --dataset 0e08... --out plug.json
 
 Gotcha: the HomeKit device advertised while unpaired rotates its id on every
 pairing trigger, so this matches by NAME substring (stable) instead of id.
